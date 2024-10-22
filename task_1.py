@@ -5,7 +5,7 @@ new_numbers = numbers[:4] + numbers[5:]
 sum_of_numbers = sum(new_numbers)
 count_of_numbers = len(new_numbers) + 1
 
-average = round(sum_of_numbers / count_of_numbers, 2)
+average = sum_of_numbers / count_of_numbers
 
 numbers[4] = average
 
