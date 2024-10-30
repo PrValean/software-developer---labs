@@ -4,7 +4,7 @@ spend = 6000  # Траты за первый месяц
 increase = 0.05  # Ежемесячный рост цен
 
 months = 0
-while not money_capital < 0:
+while money_capital >= 0 or (money_capital == 0 and salary > spend):
     spend = spend + spend*increase
     money_capital += salary - spend
     months += 1
