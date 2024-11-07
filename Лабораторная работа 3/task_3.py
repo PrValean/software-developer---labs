@@ -1,25 +1,29 @@
 def count_letters(text):
     array = text.lower()
     letter_count = {}
-    for symb in array:
-        if symb.isalpha():
-            if symb in letter_count:
-                letter_count[symb] += 1
+    for character in array:
+        if character.isalpha():
+            if character in letter_count:
+                letter_count[character] += 1
             else:
-                letter_count[symb] = 1
+                letter_count[character] = 1
     return letter_count
 
+
 def calculate_frequency(letter_count):
-    amount = 0
+    total = 0
     letter_frequency = {}
 
-    for symb, quantity in letter_count.items():
-        amount += quantity
-        letter_frequency[symb] = quantity
+    for character, quantity in letter_count.items():
+        total += quantity
+        letter_frequency[character] = quantity
 
-    for symb in letter_frequency:
-        letter_frequency[symb] = letter_frequency[symb]/amount
+    for character in letter_frequency:
+        letter_frequency[character] = (
+                letter_frequency[character] / total
+        )
     return letter_frequency
+
 
 main_str = """
 У лукоморья дуб зелёный;
