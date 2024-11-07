@@ -1,9 +1,7 @@
 def find_first_index(items_list, current_item):
-    index = 0
-    for item in items_list:
+    for index, item in enumerate(items_list):
         if item == current_item:
             return index
-        index += 1
     return None
 
 
